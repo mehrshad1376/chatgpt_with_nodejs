@@ -7,8 +7,8 @@ const client = redis.createClient();
 client.connect();
 //axios config 
 const axios = require('axios')
- 
-const bot = new Telegraf('7435906858:AAFJz1ZOcfcWRTVmwpcDy6LPJTNFMh7yw4I')
+const botToken = {token)
+const bot = new Telegraf(botToken)
 
 bot.start((ctx)=> 
 {
