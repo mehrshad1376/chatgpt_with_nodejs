@@ -82,14 +82,14 @@ bot.on('text' ,async (ctx)=>
     if(engine == 'gpt3.5-turbo' || engine=='gpt4-turbo' || engine =='gpt4o')
     {
         console.log("C")
-         const res = await axios.get(`https://one-api.ir/chatgpt/?token=891910:644252b4a52d3&action=${engine}&q=`+ encodeURIComponent(Usertext))
+         const res = await axios.get(`https://one-api.ir/chatgpt/?token={API_token}&action=${engine}&q=`+ encodeURIComponent(Usertext))
          console.log(res)
          ctx.reply(res.data.result)
     }
     else if(engine =='copilot')
     {
         
-        const res = await axios.get(`https://one-api.ir/chatgpt/?token=891910:644252b4a52d3&action=${engine}&q=`+ encodeURIComponent(Usertext)+ `&tones=${tones}`)
+        const res = await axios.get(`https://one-api.ir/chatgpt/?token={API_token}&action=${engine}&q=`+ encodeURIComponent(Usertext)+ `&tones=${tones}`)
         ctx.reply(res.data.result[0].message)
 
 
